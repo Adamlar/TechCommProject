@@ -10,7 +10,7 @@ public:
 	void read_data(std::string);
 	void setStrategy(abstract_sort_algorithm*);
 	void sort();
-	void printRunningTime(std::string);
+	void exportRunningTimeAndSortedData(std::string);
 private:
 	abstract_sort_algorithm* sort_strategy;
 	std::vector<int> data;

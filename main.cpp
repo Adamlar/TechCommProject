@@ -15,21 +15,29 @@
 #include "SortClient.h"
 #include "MergeSort.h"
 #include "BubbleSort.h"
+#include "CombSort.h"
+#include "CountingSort.h"
 
 using namespace std;
 
 /*
  * 
  */
+
 int main(int argc, char** argv) {
 	SortClient client;
 	vector<abstract_sort_algorithm*> algorithms;
-	std::string file_name = "Resources/1k-10k.txt";
+	std::string file_name = "Resources/1k-10M.txt";
 
 	MergeSort *m = new MergeSort();
+	CombSort *comb_sort = new CombSort();
+	CountingSort *counting_sort = new CountingSort();
 	BubbleSort *b = new BubbleSort();
+
 	/* add algorithms to container. */
 	algorithms.push_back(m);
+	algorithms.push_back(comb_sort);
+	algorithms.push_back(counting_sort);
 	algorithms.push_back(b);
 
 	client.read_data(file_name);
@@ -39,9 +47,9 @@ int main(int argc, char** argv) {
 		/* Strategy Pattern: set the strategy of the client as one of the derived sort algorithm class objects. */
 		client.setStrategy(algorithms[i]);
 		client.sort();
-		client.printRunningTime(file_name); /*create outputs/ folder if it does not exist. */
-		/*TODO: Add a method to export sorted data so we can check if the algorithms are implemented correctly or not. */
+		client.exportRunningTimeAndSortedData(file_name); /* you should create outputs/ folder if it does not exist. */
 	}
+	/* TODO: give filename as command line argument? */
     return 0;
 }
 
