@@ -1,4 +1,4 @@
-#include "abstract_sort_algorithm.h"
+#include "AbstractSortAlgorithm.h"
 #include <fstream>
 
 class SortClient
@@ -6,13 +6,13 @@ class SortClient
 public:
 	SortClient();
 	~SortClient();
-	SortClient(abstract_sort_algorithm*); 
+	SortClient(AbstractSortAlgorithm*); 
 	void read_data(std::string);
-	void setStrategy(abstract_sort_algorithm*);
+	void setStrategy(AbstractSortAlgorithm*);
 	void sort();
 	void exportRunningTimeAndSortedData(std::string);
 private:
-	abstract_sort_algorithm* sort_strategy;
+	AbstractSortAlgorithm* sort_strategy;
 	std::vector<int> data;
 	std::ifstream input_stream;
 	std::ofstream output_stream;

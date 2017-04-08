@@ -42,7 +42,7 @@ void BubbleSort::bubbleSort()
 void BubbleSort::print()
 {
 	std::cout << "Bubble Sort: " << std::endl;
-	abstract_sort_algorithm::print();
+	AbstractSortAlgorithm::print();
 }
 
 void BubbleSort::printRunningTime(std::string& file_name)
@@ -50,6 +50,6 @@ void BubbleSort::printRunningTime(std::string& file_name)
 	int pos = file_name.find("/");
 	std::string out_file_name = file_name.substr(pos + 1, file_name.size() - 1);
 	std::string message = "Bubble Sort";
-	abstract_sort_algorithm::exportSortedData(std::string("bubble_sort_"), out_file_name);
-	abstract_sort_algorithm::exportRunningTime(message, out_file_name);
+	AbstractSortAlgorithm::exportSortedData(std::string("bubble_sort_"), out_file_name);
+	AbstractSortAlgorithm::exportRunningTime(message, out_file_name);
 }

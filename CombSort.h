@@ -1,10 +1,10 @@
-#include "abstract_sort_algorithm.h"
+#include "AbstractSortAlgorithm.h"
 
 #ifndef COMBSORT_H
 #define COMBSORT_H
 
 class CombSort :
-	public abstract_sort_algorithm
+	public AbstractSortAlgorithm
 {
 public:
 	CombSort();

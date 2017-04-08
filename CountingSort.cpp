@@ -48,7 +48,7 @@ void CountingSort::countingSort(int min, int max)
 void CountingSort::print()
 {
 	std::cout << "Counting Sort: " << std::endl;
-	abstract_sort_algorithm::print();
+	AbstractSortAlgorithm::print();
 }
 
 void CountingSort::printRunningTime(std::string& file_name)
@@ -56,6 +56,6 @@ void CountingSort::printRunningTime(std::string& file_name)
 	int pos = file_name.find("/");
 	std::string out_file_name = file_name.substr(pos + 1, file_name.size() - 1);
 	std::string message = "Counting Sort";
-	abstract_sort_algorithm::exportSortedData(std::string("counting_sort_"), out_file_name);
-	abstract_sort_algorithm::exportRunningTime(message, out_file_name);
+	AbstractSortAlgorithm::exportSortedData(std::string("counting_sort_"), out_file_name);
+	AbstractSortAlgorithm::exportRunningTime(message, out_file_name);
 }

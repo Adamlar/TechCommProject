@@ -1,10 +1,10 @@
-#include "abstract_sort_algorithm.h"
+#include "AbstractSortAlgorithm.h"
 #include <climits>
 
 #ifndef MERGESORT_H
 #define MERGESORT_H
 
-class MergeSort : public abstract_sort_algorithm
+class MergeSort : public AbstractSortAlgorithm
 {
 public:
 	MergeSort();

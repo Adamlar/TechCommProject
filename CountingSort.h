@@ -1,10 +1,10 @@
-#include "abstract_sort_algorithm.h"
+#include "AbstractSortAlgorithm.h"
 
 #ifndef COUNTINGSORT_H
 #define COUNTINGSORT_H
 
 class CountingSort :
-	public abstract_sort_algorithm
+	public AbstractSortAlgorithm
 {
 public:
 	CountingSort();

@@ -1,5 +1,6 @@
 #include "SortClient.h"
 
+
 SortClient::SortClient()
 {
 }
@@ -9,12 +10,12 @@ SortClient::~SortClient()
 {
 }
 
-SortClient::SortClient(abstract_sort_algorithm* sort_strategy)
+SortClient::SortClient(AbstractSortAlgorithm* sort_strategy)
 {
 	this->sort_strategy = sort_strategy;
 }
 
-void SortClient::setStrategy(abstract_sort_algorithm* sort_strategy)
+void SortClient::setStrategy(AbstractSortAlgorithm* sort_strategy)
 {
 	this->sort_strategy = sort_strategy;
 }

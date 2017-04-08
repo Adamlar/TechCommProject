@@ -1,9 +1,9 @@
-#include "abstract_sort_algorithm.h"
+#include "AbstractSortAlgorithm.h"
 
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
 
-class BubbleSort : public abstract_sort_algorithm
+class BubbleSort : public AbstractSortAlgorithm
 {
 public:
 	BubbleSort();
