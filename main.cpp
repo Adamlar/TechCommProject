@@ -4,8 +4,13 @@
 #include "BubbleSort.h"
 #include "CombSort.h"
 #include "CountingSort.h"
-
+#include "InsertionSort.h"
+#include "ShellSort.h"
 using namespace std;
+
+/*
+*
+*/
 
 int main(int argc, char** argv) {
 	SortClient client;
@@ -16,11 +21,15 @@ int main(int argc, char** argv) {
 	CombSort *comb_sort = new CombSort();
 	CountingSort *counting_sort = new CountingSort();
 	BubbleSort *b = new BubbleSort();
+	InsertionSort *insertion_sort = new InsertionSort();
+	ShellSort *shell_sort = new ShellSort();
 	/* add algorithms to container. */
 	algorithms.push_back(m);
 	algorithms.push_back(comb_sort);
 	algorithms.push_back(counting_sort);
 	algorithms.push_back(b);
+	algorithms.push_back(insertion_sort);
+	algorithms.push_back(shell_sort);
 
 	client.read_data(file_name);
 
@@ -32,6 +41,6 @@ int main(int argc, char** argv) {
 		client.exportRunningTimeAndSortedData(file_name); /* you should create outputs/ folder if it does not exist. */
 	}
 	/* TODO: give filename as command line argument? */
-    return 0;
+	return 0;
 }
 
