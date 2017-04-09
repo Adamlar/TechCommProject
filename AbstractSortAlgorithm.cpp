@@ -32,13 +32,13 @@ void AbstractSortAlgorithm::exportRunningTime(std::string& message, std::string&
 		return;
 	}
 
+	output_stream << "----------------\n";
 	if (!std::is_sorted(data.begin(), data.end())){
 		std::cout << message.c_str() << " failed while sorting: " << file_name.c_str() << " in " 
 			<< (float)running_time / CLOCKS_PER_SEC << " seconds." << std::endl;
-
 		output_stream << "[ " << std::put_time(&current_time, "%d.%m.%Y %H:%M:%S") << " ] : ";
 		output_stream << message.c_str() << " : " << file_name.c_str() << " : ";
-		output_stream << "Failed";
+		output_stream << "Failed.\n";
 	}
 	else{
 		std::cout << message.c_str() << " : " << file_name.c_str() << " : ";
@@ -47,6 +47,7 @@ void AbstractSortAlgorithm::exportRunningTime(std::string& message, std::string&
 		output_stream << message.c_str() << " : " << file_name.c_str() << " : ";
 		output_stream << (float)running_time / CLOCKS_PER_SEC << " seconds." << std::endl;
 	}
+	output_stream << "----------------\n";
 	output_stream.close();
 }
 

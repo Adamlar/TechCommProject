@@ -80,3 +80,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 nbproject/
+Debug/
+*.opensdf
+*.sdf
+*.sln
+*.suo
+*.vcxproj
+*.filters
