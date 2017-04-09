@@ -32,7 +32,6 @@ void AbstractSortAlgorithm::exportRunningTime(std::string& message, std::string&
 		return;
 	}
 
-	output_stream << "----------------\n";
 	if (!std::is_sorted(data.begin(), data.end())){
 		std::cout << message.c_str() << " failed while sorting: " << file_name.c_str() << " in " 
 			<< (float)running_time / CLOCKS_PER_SEC << " seconds." << std::endl;
