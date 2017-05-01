@@ -7,7 +7,7 @@
 class InsertionSort : public AbstractSortAlgorithm
 {
 public:
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void insertionSort();
 	void print() override;
 	void printRunningTime(std::string&) override;

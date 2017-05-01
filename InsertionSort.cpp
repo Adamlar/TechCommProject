@@ -1,7 +1,7 @@
 #include "InsertionSort.h"
 
 
-void InsertionSort::sort(std::vector<int>& in_data)
+void InsertionSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	running_time = clock();

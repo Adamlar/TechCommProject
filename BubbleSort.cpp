@@ -13,7 +13,7 @@ BubbleSort::~BubbleSort()
 	data.shrink_to_fit();
 }
 
-void BubbleSort::sort(std::vector<int>& in_data)
+void BubbleSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	running_time = clock();
@@ -23,7 +23,7 @@ void BubbleSort::sort(std::vector<int>& in_data)
 
 void BubbleSort::bubbleSort()
 {
-	int temp;
+	long long int temp;
 	for (int i = 0; i <= data.size() - 1; i++)
 	{
 		for (int j = data.size() - 1; j >= i + 1; j--)

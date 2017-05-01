@@ -9,7 +9,7 @@ class CombSort :
 public:
 	CombSort();
 	~CombSort();
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void combSort();
 	void print() override;
 	void printRunningTime(std::string&) override;

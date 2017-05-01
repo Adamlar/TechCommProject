@@ -57,7 +57,7 @@ void AbstractSortAlgorithm::exportSortedData(std::string prefix, std::string& fi
 
 	if (output_stream.is_open())
 	{
-		std::ostream_iterator<int> output_iter(output_stream, "\n");
+		std::ostream_iterator<long long int> output_iter(output_stream, "\n");
 		std::copy(data.begin(), data.end(), output_iter);
 	}
 	output_stream.close();

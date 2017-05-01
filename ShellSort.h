@@ -10,7 +10,7 @@ class ShellSort : public AbstractSortAlgorithm
 {
 	std::stack<int> gaps;
 public:
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void generateGaps();
 	void shellSort();
 	void print() override;

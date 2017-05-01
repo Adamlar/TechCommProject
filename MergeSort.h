@@ -9,7 +9,7 @@ class MergeSort : public AbstractSortAlgorithm
 public:
 	MergeSort();
 	~MergeSort();
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void mergeSort(int, int);
 	void merge(int, int, int);
 	void print() override;

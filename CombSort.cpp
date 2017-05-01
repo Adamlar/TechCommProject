@@ -13,7 +13,7 @@ CombSort::~CombSort()
 	data.shrink_to_fit();
 }
 
-void CombSort::sort(std::vector<int>& in_data)
+void CombSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	running_time = clock();

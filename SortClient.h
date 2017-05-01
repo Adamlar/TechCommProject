@@ -13,7 +13,7 @@ public:
 	void exportRunningTimeAndSortedData(std::string);
 private:
 	AbstractSortAlgorithm* sort_strategy;
-	std::vector<int> data;
+	std::vector<long long int> data;
 	std::ifstream input_stream;
 	std::ofstream output_stream;
 };

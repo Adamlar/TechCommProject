@@ -8,16 +8,16 @@ class RadixSort:
 public:
 	RadixSort();
 	~RadixSort();
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void print() override;
 	void printRunningTime(std::string&) override;
 private:
 	int max_digit;
 	void radix();
-	std::vector<int> getRespondingArray(int);
-	int getRespondingDigit(int, int);
-	int getDigit(int number){ return (int)log10(number) + 1; }
-	void countingSortForRadix(std::vector<int>&);
+	std::vector<long long int> getRespondingArray(int);
+	long long int getRespondingDigit(long long int, int);
+	int getDigit(long long int number){ return (int)log10((long long int)number) + 1; }
+	void countingSortForRadix(std::vector<long long int>&);
 	};
 
 #endif

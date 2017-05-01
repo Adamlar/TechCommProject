@@ -1,4 +1,4 @@
-#include <iostream>,
+#include <iostream>
 #include <fstream>
 #include <random>
 #include <vector>
@@ -11,7 +11,7 @@ int generate_random_numbers(int lower_limit, int upper_limit, int size)
 	std::mt19937 eng(random_device()); // Generate seed with Mersenne Twister pseudo-random generator
 	std::uniform_int_distribution<> distr(lower_limit, upper_limit);
 
-	std::vector<int> set;
+	std::vector<unsigned long long int> set;
 
 	for (int n = 0; n < size; ++n) {
 		set.push_back(distr(eng));

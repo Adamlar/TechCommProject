@@ -23,10 +23,10 @@ void SortClient::setStrategy(AbstractSortAlgorithm* sort_strategy)
 void SortClient::read_data(std::string file_name)
 {
 	input_stream.open(file_name, std::fstream::in);
-	std::istream_iterator<int> input_iter(input_stream);
+	std::istream_iterator<long long int> input_iter(input_stream);
 
 	int temp;
-	std::copy(input_iter, std::istream_iterator<int>(), std::back_inserter(data));
+	std::copy(input_iter, std::istream_iterator<long long int>(), std::back_inserter(data));
 	/*
 	while (input_stream.good())
 	{

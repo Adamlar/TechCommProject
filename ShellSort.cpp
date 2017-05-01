@@ -1,7 +1,7 @@
 #include "ShellSort.h"
 
 
-void ShellSort::sort(std::vector<int>& in_data)
+void ShellSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	running_time = clock();

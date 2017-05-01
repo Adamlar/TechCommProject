@@ -10,19 +10,19 @@ BucketSort::~BucketSort()
 	data.shrink_to_fit();
 }
 
-void BucketSort::sort(std::vector<int>& in_data)
+void BucketSort::sort(std::vector<long long int>& in_data)
 {
 	this->data = in_data;
 	int bucket_size = this->data.size() * 0.1;
-	int bucket_range = ceil(pow(10, (int)log10(*std::max_element(data.begin(), data.end())) + 1)/bucket_size);
+	long long int bucket_range = ceil(pow(10, (int)log10((long long int)*std::max_element(data.begin(), data.end())) + 1)/bucket_size);
 	running_time = clock();
 	bucket(bucket_size, bucket_range);
 	running_time = clock() - running_time;
 }
 
-void BucketSort::bucket(int size, int range)
+void BucketSort::bucket(int size, long long int range)
 {
-	std::vector<std::vector<int>> buckets(size);
+	std::vector<std::vector<long long int>> buckets(size);
 	
 	for (int i = 0; i < this->data.size(); i++)
 	{
@@ -42,7 +42,8 @@ void BucketSort::bucket(int size, int range)
 
 void BucketSort::insertionSortForBucketSort()
 {
-	int temp, j;
+	long long int temp;
+	int j;
 	for (int i = 1; i < data.size(); i++) {
 		temp = data[i];
 		j = i - 1;

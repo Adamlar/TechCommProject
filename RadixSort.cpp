@@ -10,10 +10,10 @@ RadixSort::~RadixSort()
 	data.shrink_to_fit();
 }
 
-void RadixSort::sort(std::vector<int>& in_data)
+void RadixSort::sort(std::vector<long long int>& in_data)
 {
 	this->data = in_data;
-	this->max_digit = (int)log10(*std::max_element(data.begin(), data.end())) + 1;
+	this->max_digit = (int)log10((long long int)*std::max_element(data.begin(), data.end())) + 1;
 	running_time = clock();
 	radix();
 	running_time = clock() - running_time;
@@ -23,20 +23,20 @@ void RadixSort::radix()
 {
 	for (int i = 1; i <= this->max_digit; i++)
 	{
-		std::vector<int> data(getRespondingArray(i));
+		std::vector<long long int> data(getRespondingArray(i));
 		countingSortForRadix(data);
 	}
 }
 
-std::vector<int> RadixSort::getRespondingArray(int n)
+std::vector<long long int> RadixSort::getRespondingArray(int n)
 {
-	std::vector<int> data;
+	std::vector<long long int> data;
 	for (int i = 0; i < this->data.size(); i++)
 		data.push_back(getRespondingDigit(this->data[i], n));
 	return data;
 }
 
-int RadixSort::getRespondingDigit(int a, int n)
+long long int RadixSort::getRespondingDigit(long long int a, int n)
 {
 	if (n>getDigit(a))
 		return 0;
@@ -47,10 +47,10 @@ int RadixSort::getRespondingDigit(int a, int n)
 	}
 }
 
-void RadixSort::countingSortForRadix(std::vector<int>& data)
+void RadixSort::countingSortForRadix(std::vector<long long int>& data)
 {
-	std::vector<int> temp(this->data.size());
-	std::vector<int> counts(10,0);
+	std::vector<long long int> temp(this->data.size());
+	std::vector<long long int> counts(10,0);
 	for (int i = 0; i < this->data.size(); i++)
 		counts[data[i]]++;
 	for (int i = 1; i < 10; i++)

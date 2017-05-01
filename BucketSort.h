@@ -8,11 +8,11 @@ class BucketSort :
 public:
 	BucketSort();
 	~BucketSort();
-	void sort(std::vector<int>&) override;
+	void sort(std::vector<long long int>&) override;
 	void print() override;
 	void printRunningTime(std::string&) override;
 private:
-	void bucket(int, int);
+	void bucket(int, long long int);
 	void insertionSortForBucketSort();
 };
 

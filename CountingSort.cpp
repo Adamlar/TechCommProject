@@ -13,7 +13,7 @@ CountingSort::~CountingSort()
 	data.shrink_to_fit();
 }
 
-void CountingSort::sort(std::vector<int>& in_data)
+void CountingSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	int max = *std::max_element(data.begin(), data.end());
@@ -26,7 +26,7 @@ void CountingSort::sort(std::vector<int>& in_data)
 
 void CountingSort::countingSort(int min, int max)
 {
-	std::vector<int> count(max - min + 1);
+	std::vector<long long int> count(max - min + 1);
 	std::fill(count.begin(),count.end(), 0);
 
 	for (int i = 0; i < data.size(); i++)

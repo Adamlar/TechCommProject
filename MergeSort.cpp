@@ -11,7 +11,7 @@ MergeSort::~MergeSort()
 	data.shrink_to_fit();
 }
 
-void MergeSort::sort(std::vector<int>& in_data)
+void MergeSort::sort(std::vector<long long int>& in_data)
 {
 	data = in_data;
 	running_time = clock();
@@ -37,8 +37,8 @@ void MergeSort::merge(int low_bound, int mid, int upper_bound)
 	int j = 0;
 	int n1 = mid - low_bound + 1; // size of left array
 	int n2 = upper_bound - mid; // size of right array
-	std::vector<int> left_arr(n1 + 1);
-	std::vector<int> right_arr(n2 + 1);
+	std::vector<long long int> left_arr(n1 + 1);
+	std::vector<long long int> right_arr(n2 + 1);
 
 	for (; i < n1; i++) // creating left array
 	{
