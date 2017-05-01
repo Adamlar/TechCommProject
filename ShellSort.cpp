@@ -27,7 +27,7 @@ void ShellSort::shellSort()
 		int gap = gaps.top();
 		gaps.pop();
 		for (int i = gap; i < data.size(); i++) {
-			int temp = data[i];
+			long long int temp = data[i];
 			int j;
 			for (j = i; j >= gap && data[j - gap] > temp; j -= gap) {
 				data[j] = data[j - gap];

@@ -11,7 +11,8 @@ void InsertionSort::sort(std::vector<long long int>& in_data)
 
 void InsertionSort::insertionSort()
 {
-	int temp, j;
+	long long int temp;
+    int j;
 	for (int i = 1; i < data.size(); i++) {
 		temp = data[i];
 		j = i - 1;
